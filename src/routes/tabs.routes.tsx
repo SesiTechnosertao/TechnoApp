@@ -9,6 +9,8 @@ import Info from '../screens/Info';
 
 const Tab = createBottomTabNavigator();
 
+const ICON_SIZE = 32;
+
 function Tabs() {
     return (
         <Tab.Navigator
@@ -29,27 +31,27 @@ function Tabs() {
             }}
         >
             <Tab.Screen name="Home" component={Home} options={{
-                tabBarIcon: (({ focused, color, size }) => {
+                tabBarIcon: (({ focused, color }) => {
                     if (focused) {
-                        return (<Ionicons name='home' color={color} size={32} />)
+                        return (<Ionicons name='home' color={color} size={ICON_SIZE} />)
                     }
-                    return (<Ionicons name='home-outline' color={color} size={32} />)
+                    return (<Ionicons name='home-outline' color={color} size={ICON_SIZE} />)
                 })
             }} />
             <Tab.Screen name="Audio" component={Audio} options={{
-                tabBarIcon: (({ focused, color, size }) => {
+                tabBarIcon: (({ focused, color }) => {
                     if (focused) {
-                        return (<Ionicons name='volume-high' color={color} size={32} />)
+                        return (<Ionicons name='volume-high' color={color} size={ICON_SIZE} />)
                     }
-                    return (<Ionicons name='volume-high-outline' color={color} size={32} />)
+                    return (<Ionicons name='volume-high-outline' color={color} size={ICON_SIZE} />)
                 })
             }} />
             <Tab.Screen name="Info" component={Info} options={{
-                tabBarIcon: (({ focused, color, size }) => {
+                tabBarIcon: (({ focused, color }) => {
                     if (focused) {
-                        return (<Ionicons name='information-circle' color={color} size={32} />)
+                        return (<Ionicons name='information-circle' color={color} size={ICON_SIZE} />)
                     }
-                    return (<Ionicons name='information-circle-outline' color={color} size={32} />)
+                    return (<Ionicons name='information-circle-outline' color={color} size={ICON_SIZE} />)
                 })
             }} />
         </Tab.Navigator>
