@@ -1,5 +1,4 @@
 import React from 'react';
-import { Text, View } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from 'react-native-vector-icons'
 
@@ -26,7 +25,7 @@ function Tabs() {
                     height: 60,
 
                     backgroundColor: '#FF914D',
-                    borderRadius: 5
+                    borderRadius: 10
                 }
             }}
         >
