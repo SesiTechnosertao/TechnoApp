@@ -1,12 +1,10 @@
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import Tabs from './src/routes/tabs.routes';
+import 'react-native-safe-area-context'
+import Routes from './src/routes';
 
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <Tabs />
-    </NavigationContainer>
+    <Routes />
   );
 }

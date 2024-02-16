@@ -1,10 +1,15 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { Button, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import QrButton from '../components/QrButton';
 
 function Home() {
+    const navigation = useNavigation();
+
+
     return (
         <View style={styles.container}>
             <Text style={styles.title}>Bem Vindo ao Techno App!</Text>
-            <Text style={styles.paragraph}>Aproveite nossas promoções!</Text>
+            <QrButton navigation={navigation} route={'qrcode'} />
         </View>
     );
 }
@@ -22,7 +27,8 @@ const styles = StyleSheet.create({
     paragraph: {
         color: '#fff',
         fontSize: 14,
-    }
+    },
+
 });
 
 export default Home;
