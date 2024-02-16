@@ -7,7 +7,7 @@ const Stack = createNativeStackNavigator();
 
 function StackRoutes() {
     return (
-        <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <Stack.Navigator screenOptions={{ headerShown: false, contentStyle: { backgroundColor: '#000' } }}>
             <Stack.Screen name="home" component={Tabs} />
             <Stack.Screen name="qrcode" component={QrReader} />
         </Stack.Navigator>
