@@ -1,10 +1,11 @@
 import { StyleSheet, Text, View } from 'react-native';
+import AudioItem from '../components/AudioItem';
 
 function Audio() {
     return (
         <View style={styles.container}>
             <Text style={styles.title}>Ouça nosso Audios!</Text>
-            <Text style={styles.paragraph}>Aproveite!</Text>
+            <AudioItem />
         </View>
     );
 }
