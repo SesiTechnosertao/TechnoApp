@@ -8,8 +8,8 @@ export const style = StyleSheet.create({
         justifyContent: "flex-start",
         alignItems: "center",
         margin: 5,
-        width: 310,
-        height: 60,
+        width: 350,
+        height: 64,
         backgroundColor: "#FF914D",
         borderRadius: 20
     },
@@ -26,5 +26,19 @@ export const style = StyleSheet.create({
         borderRadius: 45,
         justifyContent: "center",
         alignItems: "center"
+    },
+    audioInfo:{
+        display:'flex',
+        flex: 1,
+        flexWrap: "nowrap",
+        flexDirection: 'column',
+    },
+    audioTitle:{
+        color: "#fff",
+        fontSize: 16,
+    },
+    audioDuration:{
+        color: "#fff",
+        fontSize: 12,
     }
 })
