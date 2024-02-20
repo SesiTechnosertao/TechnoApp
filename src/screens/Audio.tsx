@@ -5,7 +5,7 @@ function Audio() {
     return (
         <View style={styles.container}>
             <Text style={styles.title}>Ouça nosso Audios!</Text>
-            <AudioItem />
+            <AudioItem/>
         </View>
     );
 }
