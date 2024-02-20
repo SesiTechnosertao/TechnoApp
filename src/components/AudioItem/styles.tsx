@@ -4,12 +4,14 @@ export const style = StyleSheet.create({
 
     audioItem: {
         display: "flex",
+        flexDirection: "row",
         justifyContent: "flex-start",
         alignItems: "center",
         margin: 5,
         width: 310,
         height: 60,
         backgroundColor: "#FF914D",
+        borderRadius: 20
     },
     textButton: {
         marginTop: 10,
@@ -17,9 +19,12 @@ export const style = StyleSheet.create({
         fontWeight: 'bold',
     },
     circle: {
-        height: 36,
-        width: 36,
+        margin: 10,
+        height: 40,
+        width: 40,
         backgroundColor: "#fff",
-        borderRadius: 45
+        borderRadius: 45,
+        justifyContent: "center",
+        alignItems: "center"
     }
 })
