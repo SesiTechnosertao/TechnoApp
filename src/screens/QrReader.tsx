@@ -1,13 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { Button, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Audio } from 'expo-av';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons'
 import { useNavigation } from '@react-navigation/native';
 import { BarCodeScanner } from 'expo-barcode-scanner'
 import { Camera } from 'expo-camera'
+import useAudioContext from '../useAudio';
+import { loadSound } from '../utils';
 
 
 function QrReader() {
+    const { setIsPlay, setSound, setQrCode } = useAudioContext();
     const [hasPermission, setHasPermission] = useState(null);
     const [scanned, setScanned] = useState(false);
     const insets = useSafeAreaInsets();
@@ -22,9 +26,21 @@ function QrReader() {
         getBarCodeScannerPermissions();
     }, []);
 
-    const handleBarCodeScanned = ({ type, data }) => {
+    const handleBarCodeScanned = async ({ type, data }) => {
         setScanned(true);
-        alert(`Bar code with type ${type} and data ${data} has been scanned!`);
+        if (data == 'TECHNO') {
+            setQrCode(scanned)
+            try {
+                setIsPlay(true)
+                loadSound(new Audio.Sound)
+                setSound({ soundObject, status })
+
+                // Your sound is playing!
+            } catch (error) {
+                // An error occurred!
+            }
+            navigation.navigate('Info')
+        }
     };
 
     if (hasPermission === null) {
