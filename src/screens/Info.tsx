@@ -9,7 +9,7 @@ function Info() {
     return (
         <View style={styles.container}>
             <Text style={styles.title}>Mais Informações!</Text>
-            {sound ? <AudioItem title={'title'} duration={'1:03'} /> : null}
+            {sound ? <AudioItem title={'Audio Descrição museu da rampa'} duration={'N/A'} /> : null}
         </View>
     );
 }

@@ -32,7 +32,10 @@ function QrReader() {
             setQrCode(scanned)
             try {
                 setIsPlay(true)
-                loadSound(new Audio.Sound)
+                const { sound: soundObject, status } = await Audio.Sound.createAsync(
+                    require('../assets/audios/1214.mp3'), {
+                    shouldPlay: true
+                })
                 setSound({ soundObject, status })
 
                 // Your sound is playing!

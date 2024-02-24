@@ -30,7 +30,7 @@ function AudioItem({ title, duration }) {
                     </View>
                 </TouchableOpacity>
             }
-            <TouchableOpacity style={style.audioInfo}>
+            <TouchableOpacity style={style.audioInfo} onPressIn={() => setIsPlay(true)}>
                 <Text style={style.audioTitle}>{title}</Text>
                 <Text style={style.audioDuration}>{duration}</Text>
             </TouchableOpacity>

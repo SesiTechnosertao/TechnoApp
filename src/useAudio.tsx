@@ -41,13 +41,9 @@ export const AudioProvider = ({ children }) => {
         }
     }, [])
 
-
-
-
     useEffect(() => {
         if (isPlay) {
             handleAudioPlay()
-            console.log('Sound =>', sound)
         }
         handleAudioPause()
 
@@ -55,23 +51,17 @@ export const AudioProvider = ({ children }) => {
 
     async function handleAudioPlay() {
         if (sound && sound.status.isPlaying != true) {
-            setIsLoading(true)
-            console.log('Playind Sound', sound.status.isPlaying);
+            //console.log('Playind Sound', sound.status.isPlaying);
             setCurrentStatus(await playSound(sound.soundObject));
             setSound({ ...sound, status: currentStatus });
-            setIsLoading(false)
-
         }
     }
 
     async function handleAudioPause() {
         if (sound && sound.status.isPlaying) {
-            setIsLoading(true)
-            console.log('Pausing Sound', sound.status.isPlaying);
+            //console.log('Pausing Sound', sound.status.isPlaying);
             setCurrentStatus(await pauseSound(sound.soundObject));
-            console.log(currentStatus)
             setSound({ ...sound, status: currentStatus });
-            setIsLoading(false)
         }
     }
 

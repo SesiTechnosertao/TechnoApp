@@ -3,7 +3,7 @@ export async function loadSound(sound: any) {
     console.log('Loading Sound');
     try {
         const { sound: soundObject, status } = await sound.createAsync(
-            require('./assets/audios/1214.MP3'), {
+            require('../assets/audios/1214.mp3'), {
             shouldPlay: true
         })
         return { soundObject, status }
